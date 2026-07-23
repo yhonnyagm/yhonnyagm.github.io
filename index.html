@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deymians - XatSpace</title>
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    
-    <div class="header__wrapper">
-      <header></header>
-      <div class="cols__container">
-        <div class="left__col">
-          <div class="img__container">
-            <img src="/DeymiansPicProfile_1.png" alt="Deymians" />
-            <span></span>
-          </div>
+
+    <div class="profile-card">
+      <!-- Portada de Fondo -->
+      <div class="profile-header"></div>
+
+      <!-- Contenido Principal -->
+      <div class="profile-body">
+        
+        <!-- Avatar y Estatus -->
+        <div class="avatar-container">
+          <img src="/DeymiansPicProfile_1.png" alt="Foto de perfil de Deymians" class="avatar-img" />
+          <span class="status-badge" title="En línea"></span>
         </div>
 
-    <div class="container">
-      <div class="child"><h2><font color="white">Deymians (30003000)</font></h2>
-      <p><img src="/ve.png  " alt="Deymians" /></p>
-      <p>💘​<a href="https://xat.me/Quevezorra">Mi mujer</a>💘​</p>
-      <p>🚀<a href="https://forum.xat.com/profile/43783/">Forum profile</a></p>
-      <p></p>
+        <!-- Información de Usuario -->
+        <div class="user-info">
+          <h1>Deymians <span class="user-id">(30003000)</span></h1>
+          <img src="/ve.png" alt="Venezuela" class="flag-icon" />
+        </div>
+
+        <!-- Enlaces / Botones -->
+        <div class="links-container">
+          <a href="https://xat.me/Marita" class="profile-btn highlight-btn" target="_blank" rel="noopener">
+            <i class="fa-solid fa-heart"></i> Mi mujer 💘
+          </a>
+          <a href="https://forum.xat.com/profile/43783/" class="profile-btn" target="_blank" rel="noopener">
+            <i class="fa-solid fa-rocket"></i> Forum profile 🚀
+          </a>
+        </div>
+
       </div>
     </div>
 
