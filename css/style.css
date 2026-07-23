@@ -48,18 +48,19 @@ body {
 /* Avatar y Estatus */
 .avatar-container {
   position: relative;
-  margin-top: -95px; /* Eleva la imagen sobre el banner */
+  margin-top: -125px; /* Eleva la imagen sobre el banner */
   margin-bottom: 15px;
 }
 
 .avatar-img {
-  width: 190px;
-  height: 190px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
+  object-position: center 20%;
   border-radius: 50%;
   border: 4px solid #1d1d1d;
   background-color: #2b2b2b;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
 }
 
@@ -74,8 +75,8 @@ body {
   background-color: #2afa6a;
   border: 3.5px solid #1d1d1d;
   border-radius: 50%;
-  bottom: 12px;
-  right: 14px;
+  bottom: 16px;
+  right: 18px;
   z-index: 2;
 }
 
@@ -155,19 +156,19 @@ body {
   }
 
   .avatar-container {
-    margin-top: -55px;
+    margin-top: -75px;
   }
 
   .avatar-img {
-    width: 110px;
-    height: 110px;
+    width: 140px;
+    height: 140px;
   }
 
   .status-badge {
-    width: 14px;
-    height: 14px;
-    bottom: 5px;
-    right: 8px;
+    width: 16px;
+    height: 16px;
+    bottom: 8px;
+    right: 10px;
   }
 
   .user-info h1 {
