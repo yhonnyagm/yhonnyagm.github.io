@@ -8,14 +8,15 @@
 
 body {
   width: 100%;
-  min-height: 100vh;
+  height: 100hv;
   font-family: "Poppins", sans-serif;
   background-color: #121212;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 10px;
+  padding: 10px;
+  overflow: hidden;
 }
 
 /* Tarjeta Principal */
@@ -32,7 +33,7 @@ body {
 /* Imagen de Portada */
 .profile-header {
   width: 100%;
-  height: 200px;
+  height: 160px;
   background: url("/bg.jpeg") no-repeat center center / cover;
 }
 
@@ -48,7 +49,7 @@ body {
 /* Avatar y Estatus */
 .avatar-container {
   position: relative;
-  margin-top: -125px; /* Eleva la imagen sobre el banner */
+  margin-top: -110px; /* Eleva la imagen sobre el banner */
   margin-bottom: 8px;
 }
 
