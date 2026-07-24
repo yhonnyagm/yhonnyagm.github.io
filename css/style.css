@@ -80,18 +80,26 @@ body {
   z-index: 2;
 }
 
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 /* Información de Usuario */
 .user-info h1 {
   font-size: 1.5rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 .user-info .user-id {
   font-size: 1.1rem;
   color: #a0a0a0;
   font-weight: 400;
+  margin-bottom: 8px;
 }
 
 .flag-icon {
