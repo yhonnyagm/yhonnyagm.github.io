@@ -38,7 +38,7 @@ body {
 
 /* Cuerpo de la Tarjeta */
 .profile-body {
-  padding: 0 20px 30px 20px;
+  padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +49,7 @@ body {
 .avatar-container {
   position: relative;
   margin-top: -125px; /* Eleva la imagen sobre el banner */
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .avatar-img {
@@ -92,20 +92,23 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 2px;
+  margin: 0;
+  line-height: 1.1;
 }
 
 .user-info .user-id {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #a0a0a0;
   font-weight: 400;
-  margin-bottom: 8px;
+  margin-top: -2px;
+  margin-bottom: 6px;
+  line-height: 1;
 }
 
 .flag-icon {
-  width: 24px;
+  width: 22px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   border-radius: 2px;
 }
 
