@@ -244,3 +244,59 @@ body {
     font-size: 1.35rem;
   }
 }
+
+.btn-beloved {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.35);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-beloved::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.btn-beloved:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(225, 29, 72, 0.45);
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+}
+
+.btn-beloved:hover::after {
+  left: 140%;
+}
+
+.beat-icon {
+  font-size: 1.1rem;
+  color: #ffffff;
+  animation: pulse-heart 1.8s infinite;
+}
+
+@keyframes pulse-heart {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.2); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.2); }
+  70% { transform: scale(1); }
+}
