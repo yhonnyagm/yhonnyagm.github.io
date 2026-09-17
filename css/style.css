@@ -8,10 +8,9 @@
 
 html, body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 body {
@@ -22,41 +21,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px 16px;
+  overflow-x: hidden;
 }
 
-/* Tarjeta Principal Glassmorphism */
+/* Tarjeta Principal */
 .profile-card {
   width: 100%;
-  max-width: 580px;
-  background: rgba(22, 25, 35, 0.85);
+  max-width: 540px;
+  background: rgba(22, 25, 35, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(69, 188, 243, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
-/* Imagen de Portada con viñeta */
+/* Imagen de Portada */
 .profile-header {
   position: relative;
   width: 100%;
-  height: 190px;
-  background: url("/bg.jpeg") no-repeat center center / cover;
+  height: 180px;
+  background: url("../bg.jpeg") no-repeat center center / cover;
 }
 
 .header-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(22, 25, 35, 0.95) 100%);
 }
 
 /* Cuerpo de la Tarjeta */
 .profile-body {
-  padding: 0 24px 20px 24px;
+  padding: 0 24px 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,36 +63,37 @@ body {
 /* Avatar y Estatus */
 .avatar-container {
   position: relative;
-  margin-top: -115px;
+  margin-top: -105px;
   margin-bottom: 12px;
 }
 
 .avatar-img {
-  width: 210px;
-  height: 210px;
+  width: 190px;
+  height: 190px;
   object-fit: cover;
   object-position: center 20%;
   border-radius: 50%;
   border: 4px solid #161923;
   background-color: #1a1d28;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .avatar-img:hover {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 /* Indicador con Efecto Pulso */
 .status-badge {
   position: absolute;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   background-color: #00ff66;
   border: 3.5px solid #161923;
   border-radius: 50%;
-  bottom: 15px;
-  right: 18px;
+  bottom: 14px;
+  right: 16px;
   z-index: 2;
   box-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
   animation: pulse-dot 2s infinite;
@@ -122,18 +120,17 @@ body {
 }
 
 .user-info h1 {
-  font-size: 1.65rem;
+  font-size: 1.55rem;
   font-weight: 700;
   background: linear-gradient(180deg, #ffffff 40%, #c4cbd8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
   line-height: 1.2;
-  letter-spacing: 0.5px;
 }
 
 .user-info .user-id {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #7a8293;
   font-weight: 500;
   margin-top: 2px;
@@ -144,35 +141,98 @@ body {
   width: 22px;
   height: auto;
   margin-bottom: 18px;
-  border-radius: 3px;
+  border-radius: 2px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 /* Contenedor de Botones */
 .links-container {
   width: 100%;
-  max-width: 340px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
+/* Botón 1: Marita */
+.btn-beloved {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(225, 29, 72, 0.35);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-beloved i,
+.btn-beloved span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-beloved::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.btn-beloved:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(225, 29, 72, 0.45);
+}
+
+.btn-beloved:hover::after {
+  left: 140%;
+}
+
+.beat-icon {
+  font-size: 1.05rem;
+  color: #ffffff;
+  animation: pulse-heart 1.8s infinite;
+}
+
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); }
+  14%, 42% { transform: scale(1.2); }
+  28% { transform: scale(1); }
+}
+
+/* Botón 2: Forum Profile */
 .profile-btn {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 100%;
   padding: 13px 20px;
   background: rgba(69, 188, 243, 0.08);
   color: #45bcf3;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid rgba(69, 188, 243, 0.25);
   backdrop-filter: blur(5px);
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
 }
 
 .profile-btn i {
@@ -184,7 +244,7 @@ body {
   background: #45bcf3;
   color: #0b0c10;
   border-color: #45bcf3;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(69, 188, 243, 0.35);
 }
 
@@ -192,36 +252,14 @@ body {
   transform: translateY(-2px) rotate(10deg);
 }
 
-/* Créditos / Marca de Agua */
-.footer-credits {
-  margin-top: 22px;
-}
-
-.footer-credits span {
-  font-size: 0.72rem;
-  color: #555b68;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-}
-
-.footer-credits .author {
-  color: #7e8799;
-  font-weight: 600;
-}
-
 /* Adaptación Móvil */
 @media (max-width: 480px) {
-  html, body {
-    overflow-y: auto;
-  }
-
-  .profile-card {
-    border-radius: 0;
-    min-height: 100vh;
+  body {
+    padding: 12px;
   }
 
   .profile-header {
-    height: 150px;
+    height: 140px;
   }
 
   .avatar-container {
@@ -243,60 +281,4 @@ body {
   .user-info h1 {
     font-size: 1.35rem;
   }
-}
-
-.btn-beloved {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  padding: 14px 24px;
-  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
-  color: #ffffff;
-  font-size: 0.98rem;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.35);
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.btn-beloved::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-  transform: skewX(-20deg);
-  transition: left 0.6s ease;
-}
-
-.btn-beloved:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(225, 29, 72, 0.45);
-  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
-}
-
-.btn-beloved:hover::after {
-  left: 140%;
-}
-
-.beat-icon {
-  font-size: 1.1rem;
-  color: #ffffff;
-  animation: pulse-heart 1.8s infinite;
-}
-
-@keyframes pulse-heart {
-  0% { transform: scale(1); }
-  14% { transform: scale(1.2); }
-  28% { transform: scale(1); }
-  42% { transform: scale(1.2); }
-  70% { transform: scale(1); }
 }
